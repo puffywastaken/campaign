@@ -16,7 +16,7 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: #f4f7fa;
       color: #1f2e3a;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     .container {
       max-width: 1200px;
@@ -54,14 +54,6 @@
       display: flex;
       align-items: center;
       gap: 16px;
-    }
-    .logo .badge-icon {
-      font-size: 1.8rem;
-      color: var(--gold);
-      background: rgba(255,255,255,0.06);
-      padding: 4px 12px;
-      border-radius: 8px;
-      border: 1px solid rgba(201, 168, 76, 0.25);
     }
     .logo h1 {
       font-weight: 700;
@@ -200,6 +192,63 @@
     .hero-badge .badge-sub {
       opacity: 0.8;
       font-size: 0.9rem;
+    }
+
+    /* events section */
+    .events-section {
+      background: white;
+      padding: 40px 0;
+      border-bottom: 1px solid #e8edf2;
+    }
+    .events-section h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--bg-navy);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .events-section h3 i {
+      color: var(--gold);
+    }
+    .events-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .event-card {
+      background: var(--gold-pale);
+      border-radius: 12px;
+      padding: 20px 24px;
+      flex: 1;
+      min-width: 240px;
+      border-left: 6px solid var(--gold);
+    }
+    .event-card .date {
+      font-weight: 700;
+      color: var(--bg-navy);
+      font-size: 1.1rem;
+    }
+    .event-card .event-name {
+      font-weight: 600;
+      color: var(--blue-mid);
+      margin-top: 4px;
+    }
+    .event-card .event-location {
+      font-size: 0.95rem;
+      color: #4a6679;
+      margin-top: 2px;
+    }
+    .event-card .speaker-tag {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--bg-navy);
+      color: white;
+      padding: 4px 14px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
     }
 
     /* about */
@@ -407,6 +456,9 @@
       font-size: 2rem;
       color: var(--gold);
     }
+    .responsive-block ul li {
+      list-style: none;
+    }
 
     /* footer */
     .footer-contact {
@@ -476,7 +528,6 @@
 <div class="top-bar">
   <div class="container">
     <div class="logo">
-      <div class="badge-icon"><i class="fas fa-city"></i></div>
       <div>
         <h1>Julian Herrera <span class="city-badge">City Council</span></h1>
         <span class="subhead">La Quinta, California · At-large district</span>
@@ -496,14 +547,30 @@
       <div class="greeting"><i class="fas fa-hand-peace"></i> For La Quinta Residents</div>
       <h2>Julian Herrera <small>Building a responsive, inclusive city for all</small></h2>
       <div class="tagline">
-        <i class="fas fa-seedling"></i> Autistic advocate · Son of educators · Guided by experience, not ideology
+        <i class="fas fa-seedling"></i> Autistic advocate · Son of educators · Fighting for opportunity
       </div>
     </div>
     <div class="hero-badge">
       <div class="gold-stars">★ ★ ★</div>
       <i class="fas fa-handshake"></i>
-      <div class="badge-title">Opportunity · Affordability · Responsiveness</div>
+      <div class="badge-title">Opportunity, Affordability, Responsiveness</div>
       <div class="badge-sub">Committee on Opportunity · CTE pipelines</div>
+    </div>
+  </div>
+</section>
+
+<!-- events -->
+<section class="events-section">
+  <div class="container">
+    <h3><i class="fas fa-calendar-check"></i> Upcoming Events</h3>
+    <p style="color: #4a6679; margin-top: 4px;">Come say hello and share what matters to you.</p>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="date">Saturday, August 22, 2026 · 2:00 PM - 4:00 PM</div>
+        <div class="event-name">Democrats of the Desert</div>
+        <div class="event-location"><i class="fas fa-map-pin" style="color: var(--gold); margin-right: 6px;"></i> Indian Wells Resort Hotel, 76661 Hwy 111, Indian Wells, CA</div>
+        <div class="speaker-tag"><i class="fas fa-microphone"></i> Julian Herrera · Featured Speaker</div>
+      </div>
     </div>
   </div>
 </section>
@@ -513,14 +580,15 @@
   <div class="container about-grid">
     <div class="about-text">
       <h3><i class="fas fa-user-graduate"></i> About Julian</h3>
-      <p>Julian Herrera is a lifelong resident of La Quinta and a proud product of our local schools. As an autistic individual, his lived experience is not an afterthought to his policy positions; it is the very foundation from which he governs. He understands that true leadership means building systems that work for everyone, not just those who fit a narrow mold. His philosophy is guided by empathy, clarity, and the unshakeable belief that every voice deserves to be heard.</p>
-      <p>Julian is the son of an educator; his mother recently retired as an assistant principal. That upbringing instilled in him a deep respect for public service and the transformative power of community. He believes that strong communication between the city, local schools, and community organizations is essential to creating a thriving La Quinta.</p>
+      <p>Julian Herrera is a lifelong resident of La Quinta and a proud product of our local schools. As an autistic individual, his lived experience is not an afterthought to his policy positions. It's the very foundation from which he governs. He understands that true leadership means building systems that work for everyone, not just those who fit a narrow mold.</p>
+
+      <p>Julian is the son of an educator. His mother recently retired as an assistant principal, and that upbringing instilled in him a deep respect for public service and the transformative power of community. He believes that strong communication between the city, local schools, and community organizations is essential to creating a thriving La Quinta.</p>
 
       <div class="about-highlight">
-        <i class="fas fa-handshake"></i> Julian is committed to building strong partnerships with educators, community leaders, and workers across the valley. He believes that the voices of those who serve our community must be centered in every policy decision.
+        <i class="fas fa-handshake"></i> Julian believes in bringing people together. He's committed to building strong partnerships with educators, community leaders, and workers across the valley so that every policy decision reflects the needs of real people.
       </div>
 
-      <p style="margin-top: 14px;"><i class="fas fa-briefcase" style="color: var(--gold); margin-right: 10px;"></i> Julian is committed to keeping valley-trained talent in the valley, expanding municipal internships, and fostering a culture of responsiveness that puts residents first. He represents every corner of La Quinta through the at-large district system, bringing the same dedication and care to every neighborhood.</p>
+      <p style="margin-top: 14px;"><i class="fas fa-briefcase" style="color: var(--gold); margin-right: 10px;"></i> Julian wants to keep valley-trained talent in the valley. He's focused on expanding municipal internships, creating real job opportunities, and fostering a culture of responsiveness that puts residents first. He represents every corner of La Quinta through the at-large district system, bringing the same dedication and care to every neighborhood.</p>
     </div>
     <div class="about-image">
       <i class="fas fa-city"></i>
@@ -537,7 +605,7 @@
 
     <div class="opportunity-banner">
       <h2><i class="fas fa-rocket"></i> Opportunity First</h2>
-      <p><span class="highlight-gold">Julian's vision is centered on creating unprecedented opportunity</span> for youth, workers, families, and local businesses. Through the <strong>Committee on Opportunity</strong>, expanded CTE pipelines, and legal action against discriminatory hiring, Julian is building a La Quinta where everyone can thrive.</p>
+      <p><span class="highlight-gold">Julian's vision is centered on creating real opportunity</span> for youth, workers, families, and local businesses. Through the Committee on Opportunity, expanded CTE pipelines, and legal action against discriminatory hiring, Julian is building a La Quinta where everyone can thrive.</p>
     </div>
 
     <div class="goal-grid">
@@ -553,7 +621,7 @@
           <li><strong>Create hundreds of new jobs</strong> by pressuring businesses to expand hiring, and use the full legal might of government to compel them, including legal action if discrimination occurs.</li>
           <li>Keep valley-trained people in the valley by offering pathways that make our region a place where talent can thrive.</li>
           <li>Expand municipal internships and integrate more government and nonprofit grants into this framework.</li>
-          <li>Subsidize internships under this initiative to remove financial barriers for young people.</li>
+          <li>Create internships under this initiative to remove barriers for young people.</li>
         </ul>
         <div style="margin-top: 16px; background: var(--gold-pale); padding: 12px 16px; border-radius: 10px; border-left: 4px solid var(--gold);">
           <i class="fas fa-comments" style="color: var(--gold); margin-right: 8px;"></i>
@@ -611,16 +679,15 @@
     <div class="responsive-block">
       <h5><i class="fas fa-rainbow"></i> Values and Cultural Change</h5>
       <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 18px 30px; margin-top: 12px;">
-        <li><i class="fas fa-female" style="color: var(--bg-navy);"></i> Full reproductive rights for women, because healthcare decisions belong to individuals, not politicians.</li>
         <li><i class="fas fa-lgbtq" style="color: var(--bg-navy);"></i> Stronger protections for LGBTQ+ and trans youth, ensuring that every young person in La Quinta feels safe and celebrated.</li>
         <li><i class="fas fa-hand-peace"></i> Encourage a culture change in the valley: one that embraces neurodiversity, compassion, and the understanding that our differences make us stronger.</li>
       </ul>
       <div style="margin-top: 14px; background: #c5d9e9; padding: 6px 22px; border-radius: 40px; display: inline-block; font-weight: 500;">
-        <i class="fas fa-heart" style="color: #8f3b48;"></i> Inclusive · Progressive · Rooted in community
+        <i class="fas fa-heart" style="color: #8f3b48;"></i> Inclusive, Progressive, Rooted in community
       </div>
       <div style="margin-top: 18px; background: var(--gold-pale); padding: 14px 20px; border-radius: 10px; border-left: 6px solid var(--gold);">
         <i class="fas fa-handshake" style="color: var(--gold); margin-right: 12px; font-size: 1.2rem;"></i>
-        <strong>Julian believes that effective governance requires constant, open dialogue with the people who serve our community.</strong> He is committed to building strong, lasting partnerships with educators, community leaders, and workers to ensure that every policy decision reflects the needs and aspirations of La Quinta residents.
+        <strong>Julian believes that effective governance requires constant, open dialogue with the people who serve our community.</strong> He's committed to building strong, lasting partnerships with educators, community leaders, and workers to ensure that every policy decision reflects the needs and aspirations of La Quinta residents.
       </div>
     </div>
 
@@ -628,7 +695,7 @@
       <div style="flex: 1; min-width: 200px;">
         <i class="fas fa-users" style="font-size: 2rem; color: var(--gold);"></i>
         <h4 style="margin: 6px 0; color: var(--bg-navy);">Committee on Opportunity</h4>
-        <p style="font-size: 0.98rem;">Youth, government, local businesses, and community leaders — all at the table.</p>
+        <p style="font-size: 0.98rem;">Youth, government, local businesses, and community leaders all at the table.</p>
       </div>
       <div style="flex: 1; min-width: 200px;">
         <i class="fas fa-bridge" style="font-size: 2rem; color: var(--gold);"></i>
@@ -648,7 +715,7 @@
         Commitment to Community Dialogue
       </h4>
       <p style="font-size: 1.05rem; margin-top: 8px;">
-        Julian Herrera believes that effective governance requires constant, open dialogue with the people who shape our community. He is committed to establishing regular, structured communication channels with educators, community leaders, and workers to ensure that the needs of students, families, and working people are central to city policy. By bringing diverse voices together, Julian aims to build a La Quinta where everyone has a stake in our shared future.
+        Julian Herrera believes that effective governance requires constant, open dialogue with the people who shape our community. He's committed to establishing regular, structured communication channels with educators, community leaders, and workers to ensure that the needs of students, families, and working people are central to city policy. By bringing diverse voices together, Julian aims to build a La Quinta where everyone has a stake in our shared future.
       </p>
     </div>
   </div>
