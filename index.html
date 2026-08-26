@@ -250,6 +250,17 @@
       font-size: 0.8rem;
       font-weight: 600;
     }
+    .event-card .completed-badge {
+      display: inline-block;
+      margin-top: 10px;
+      background: #2b6f4a;
+      color: white;
+      padding: 4px 18px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-left: 10px;
+    }
 
     /* about */
     .about {
@@ -301,19 +312,39 @@
       min-width: 160px;
       background: var(--blue-light);
       border-radius: 16px;
-      padding: 34px 20px;
+      padding: 12px;
       text-align: center;
-      font-size: 3.6rem;
-      color: var(--bg-navy);
       border: 2px solid var(--gold);
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-image img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 8px;
+      border: 3px solid white;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     }
     .about-image span {
       display: block;
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 600;
       color: #143b4f;
-      margin-top: 12px;
+      margin-top: 6px;
+      background: rgba(255,255,255,0.7);
+      padding: 4px 16px;
+      border-radius: 40px;
+    }
+    .about-image .caption {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #1a4a6b;
+      margin-top: 2px;
     }
 
     /* manifesto */
@@ -502,6 +533,17 @@
       width: 28px;
       color: var(--gold);
     }
+    .democrat-badge {
+      background: #1a4a6b;
+      color: white;
+      padding: 6px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-block;
+      border: 1px solid var(--gold);
+      margin-top: 6px;
+    }
 
     @media (max-width: 700px) {
       .top-bar .container {
@@ -562,14 +604,17 @@
 <!-- events -->
 <section class="events-section">
   <div class="container">
-    <h3><i class="fas fa-calendar-check"></i> Upcoming Events</h3>
-    <p style="color: #4a6679; margin-top: 4px;">Come say hello and share what matters to you.</p>
+    <h3><i class="fas fa-calendar-check"></i> Recent & Upcoming</h3>
+    <p style="color: #4a6679; margin-top: 4px;">Stay connected — I'm here to listen.</p>
     <div class="events-grid">
-      <div class="event-card">
+      <div class="event-card" style="border-left-color: #2b6f4a;">
         <div class="date">Saturday, August 22, 2026 · 2:00 PM - 4:00 PM</div>
-        <div class="event-name">Democrats of the Desert</div>
+        <div class="event-name">Democrats of the Desert <span class="completed-badge"><i class="fas fa-check-circle"></i> Completed</span></div>
         <div class="event-location"><i class="fas fa-map-pin" style="color: var(--gold); margin-right: 6px;"></i> Indian Wells Resort Hotel, 76661 Hwy 111, Indian Wells, CA</div>
         <div class="speaker-tag"><i class="fas fa-microphone"></i> Julian Herrera · Featured Speaker</div>
+        <div style="margin-top: 12px; font-size: 0.9rem; color: #2b6f4a; background: #e6f5ed; padding: 4px 14px; border-radius: 40px; display: inline-block;">
+          <i class="fas fa-check-circle"></i> Event completed — great conversations!
+        </div>
       </div>
     </div>
   </div>
@@ -582,7 +627,7 @@
       <h3><i class="fas fa-user-graduate"></i> About Julian</h3>
       <p>Julian Herrera is a lifelong resident of La Quinta and a proud product of our local schools. As an autistic individual, his lived experience is not an afterthought to his policy positions. It's the very foundation from which he governs. He understands that true leadership means building systems that work for everyone, not just those who fit a narrow mold.</p>
 
-      <p>Julian is the son of an educator. His mother recently retired as an assistant principal, and that upbringing instilled in him a deep respect for public service and the transformative power of community. He believes that strong communication between the city, local schools, and community organizations is essential to creating a thriving La Quinta.</p>
+      <p>Julian is the son of an educator. His mother recently retired as an assistant principal, and that upbringing instilled in him a deep respect for public service and the transformative power of community. He believes that strong communication between the city, local schools, and community organizations is essential to creating a thriving La Quinta. Julian is proud to be the only Democrat-aligned candidate in this race, bringing a progressive, community-first vision to the City Council.</p>
 
       <div class="about-highlight">
         <i class="fas fa-handshake"></i> Julian believes in bringing people together. He's committed to building strong partnerships with educators, community leaders, and workers across the valley so that every policy decision reflects the needs of real people.
@@ -591,8 +636,9 @@
       <p style="margin-top: 14px;"><i class="fas fa-briefcase" style="color: var(--gold); margin-right: 10px;"></i> Julian wants to keep valley-trained talent in the valley. He's focused on expanding municipal internships, creating real job opportunities, and fostering a culture of responsiveness that puts residents first. He represents every corner of La Quinta through the at-large district system, bringing the same dedication and care to every neighborhood.</p>
     </div>
     <div class="about-image">
-      <i class="fas fa-city"></i>
+      <img src="julian.png" alt="Julian Herrera" />
       <span>La Quinta · At-large representative</span>
+      <span class="caption"><i class="fas fa-camera"></i> Julian Herrera</span>
     </div>
   </div>
 </section>
